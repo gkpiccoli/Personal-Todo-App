@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Stack(
@@ -45,7 +45,26 @@ class MyApp extends StatelessWidget {
                 color: Colors.red,
                 width: 50,
                 height: 50,
-              )
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Container(
+                color: Colors.cyan,
+                height: 50,
+                width: 50,
+              ),
+              Container(
+                color: Colors.pink,
+                width: 50,
+                height: 50,
+              ),
+              Container(
+                color: Colors.purple,
+                height: 50,
+                width: 50,
+              ),
             ],
           )
         ],
