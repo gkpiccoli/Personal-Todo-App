@@ -66,7 +66,7 @@ class MyApp extends StatelessWidget {
                 width: 50,
               ),
             ],
-          ),
+          )
         ],
       ),
     );
