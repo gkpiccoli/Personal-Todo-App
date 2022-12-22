@@ -7,8 +7,10 @@ Projeto teste utilizado para fazer testes no flutter
 - Container (Caixa...)
 - Stack (Sobreposição de containers)
 - Column (Vai ficar um embaixo do outro)
+- Row (Linhas, 'oposto' da coluna)
 - MainAxisAligment (Eixo principal - Vertical)
 - CrossAxisAligment(Corta o eixo principal em 90 graus)
+-
 
 ## Getting Started
 
