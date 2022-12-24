@@ -51,6 +51,8 @@ class MyApp extends StatelessWidget {
               ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
                   color: Colors.cyan,
@@ -68,6 +70,12 @@ class MyApp extends StatelessWidget {
                   width: 50,
                 ),
               ],
+            ),
+            Container(
+              color: Colors.amber,
+              height: 30,
+              width: 300,
+              child: const Text('texto sem estilização'),
             )
           ],
         ),
