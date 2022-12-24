@@ -4,7 +4,7 @@ Projeto teste utilizado para fazer testes no flutter
 
 1 - Widgets:
 
-- Container (Caixa...)
+- Container (Caixa que inicialmente ocupa todas as proporções da tela )
 - Stack (Sobreposição de containers)
 - Column (Vai ficar um embaixo do outro)
 - Row (Linhas, 'oposto' da coluna)
