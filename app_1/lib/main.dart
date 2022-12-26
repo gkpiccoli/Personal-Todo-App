@@ -75,8 +75,13 @@ class MyApp extends StatelessWidget {
               color: Colors.amber,
               height: 30,
               width: 300,
-              child: const Text('texto sem estilização'),
-            )
+              child: const Text(
+                'texto sem estilização',
+                style: TextStyle(color: Colors.black, fontSize: 16),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            ElevatedButton(onPressed: onPressed, child: child)
           ],
         ),
       ),
