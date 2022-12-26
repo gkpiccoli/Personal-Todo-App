@@ -12,6 +12,7 @@ Projeto teste utilizado para fazer testes no flutter
 - CrossAxisAligment(Corta o eixo principal em 90 graus)
 - Text (Inserir texto KKKKKK)
 - ElevatedButton (Botão elevado que utiliza o estilo material design)
+- Overflow (Widgets maiores que a tela)
 
 ## Getting Started
 
