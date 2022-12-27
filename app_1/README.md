@@ -10,9 +10,9 @@ Projeto teste utilizado para fazer testes no flutter
 - Row (Linhas, 'oposto' da coluna)
 - MainAxisAligment (Eixo principal - Vertical)
 - CrossAxisAligment(Corta o eixo principal em 90 graus)
-- Text (Inserir texto)
+- Text (Inserir textos)
 - ElevatedButton (Botão elevado que utiliza o estilo material design)
-- Overflow (Widgets maiores que a tela e seus tratamentos)
+- Overflow (Widgets maiores que a tela e seus tratamentos. Column width, row height)
 
 ## Getting Started
 
