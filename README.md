@@ -1,8 +1,6 @@
 # Flutter Widgets
 
 Testes com diversos widgets do Flutter.
-Informações mais detalhadas no README do projeto
+Informações mais detalhadas no README do projeto principal
 
-## Merry XMASSSSSSS
 
-Alou Natalina
