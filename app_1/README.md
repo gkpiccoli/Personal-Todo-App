@@ -6,13 +6,15 @@ Projeto teste utilizado para fazer testes no flutter
 
 - Container (Caixa que inicialmente ocupa todas as proporções da tela )
 - Stack (Sobreposição de containers)
-- Column (Vai ficar um embaixo do outro)
-- Row (Linhas, 'oposto' da coluna)
+- Column (Vai ficar um embaixo do outro, não tem limites definidos na sua vertical)
+- Row (Linhas, 'oposto' da coluna, não tem limites definidos na sua horizontal.)
+- Overflow (Widgets maiores que a tela e seus tratamentos. Column width, row height)
 - MainAxisAligment (Eixo principal - Vertical)
 - CrossAxisAligment(Corta o eixo principal em 90 graus)
 - Text (Inserir textos)
 - ElevatedButton (Botão elevado que utiliza o estilo material design)
-- Overflow (Widgets maiores que a tela e seus tratamentos. Column width, row height)
+- Cores Color.fromARGB (255, 123, 122, 232) (Reg Green Blue e Alpha que é a transparência)
+
 
 ## Getting Started
 
