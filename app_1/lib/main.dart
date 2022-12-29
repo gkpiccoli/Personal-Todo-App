@@ -10,12 +10,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Widgets - Flutter',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold()
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Widgets - Flutter',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: Scaffold(
+          appBar: AppBar(
+            title: const Text('Flutter meus primeiros passos'),
+          ),
+        ));
   }
 }
