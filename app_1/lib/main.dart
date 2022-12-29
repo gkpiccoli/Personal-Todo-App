@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter meus primeiros passos'),
-        
-        ),
+        appBar: AppBar(title: const Text('Flutter meus primeiros passos')),
+        body: Container(),
+        floatingActionButton: FloatingActionButton.large(onPressed: (() {})),
+      
       ),
     );
   }
