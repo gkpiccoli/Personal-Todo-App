@@ -14,7 +14,7 @@ Projeto teste utilizado para fazer testes no flutter
 - Text (Inserir textos)
 - ElevatedButton (Botão elevado que utiliza o estilo material design)
 - Cores Color.fromARGB (255, 123, 122, 232) (Reg Green Blue e Alpha que é a transparência)
-
+- Scaffold (Recebe o AppBar por exemplo, que preeenche o topo da tela)
 
 ## Getting Started
 
