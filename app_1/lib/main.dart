@@ -16,9 +16,35 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(title: const Text('Flutter meus primeiros passos')),
-        body: Container(),
-        floatingActionButton: FloatingActionButton(onPressed: (() {})),
+        appBar: AppBar(title: const Text('Tarefas')),
+        body: Container(
+          child: Stack(children: [
+            Container(
+              color: Colors.blue,
+              height: 140,
+            ),
+            Container(
+              color: Colors.white,
+              height: 100,
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      color: Colors.black26,
+                      width: 72,
+                      height: 100,
+                    ),
+                    Text('Aprendendo Flutter'),
+                    ElevatedButton(
+                        onPressed: () {},
+                        child: Icon(Icons.arrow_drop_up_sharp))
+                  ]),
+            )
+          ]),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (() {}),
+        ),
       ),
     );
   }
