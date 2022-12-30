@@ -34,10 +34,10 @@ class MyApp extends StatelessWidget {
                       width: 72,
                       height: 100,
                     ),
-                    Text('Aprendendo Flutter'),
+                    const Text('Aprendendo Flutter'),
                     ElevatedButton(
                         onPressed: () {},
-                        child: Icon(Icons.arrow_drop_up_sharp))
+                        child: const Icon(Icons.arrow_drop_up_sharp))
                   ]),
             )
           ]),
