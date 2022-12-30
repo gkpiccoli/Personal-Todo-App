@@ -18,8 +18,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: const Text('Flutter meus primeiros passos')),
         body: Container(),
-        floatingActionButton: FloatingActionButton.large(onPressed: (() {})),
-      
+        floatingActionButton: FloatingActionButton(onPressed: (() {})),
       ),
     );
   }
