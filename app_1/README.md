@@ -16,6 +16,7 @@ Projeto teste utilizado para fazer testes no flutter
 - Cores Color.fromARGB (255, 123, 122, 232) (Reg Green Blue e Alpha que é a transparência)
 - Scaffold (Recebe o AppBar por exemplo, que preeenche o topo da tela)
 - Body (meio da tela)
+- Layout do App ()
 
 ## Getting Started
 
