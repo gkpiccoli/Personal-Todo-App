@@ -1,6 +1,6 @@
-# flutter testes
+# Desenhando Telas com o Flutter!!!
 
-Projeto teste utilizado para fazer testes no flutter
+Projeto teste utilizado para fazer desenhos de telas com o flutter.
 
 1 - Widgets:
 
