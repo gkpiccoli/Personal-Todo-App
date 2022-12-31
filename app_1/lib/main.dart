@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Task(),
-            Task(),
-            Task(),
+            Task('Viagens'),
+            Task('Dicas de Hotéis e Bares'),
+            Task('Locais de visitação'),
           ],
         ),
         floatingActionButton: FloatingActionButton(
@@ -55,7 +55,7 @@ class Task extends StatelessWidget {
               width: 72,
               height: 100,
             ),
-            const Text('Aprendendo Flutter'),
+            Text(nome),
             ElevatedButton(
                 onPressed: () {}, child: const Icon(Icons.arrow_drop_up_sharp))
           ]),
