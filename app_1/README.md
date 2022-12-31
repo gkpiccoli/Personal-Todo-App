@@ -17,6 +17,9 @@ Projeto teste utilizado para desenhar telas com o framework Flutter.
 - Scaffold (Recebe o AppBar por exemplo, que preeenche o topo da tela)
 - Body (meio da tela)
 - Layout do App ()
+- Stateless Widget
+- ListView ()
+- Padding ()
 
 ## Getting Started
 
