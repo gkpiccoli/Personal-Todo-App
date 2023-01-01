@@ -59,7 +59,7 @@ class Task extends StatelessWidget {
                 children: [
                   Container(
                     color: Colors.black26,
-                    width: 72,
+                    width: 100,
                     height: 100,
                   ),
                   SizedBox(
@@ -74,7 +74,8 @@ class Task extends StatelessWidget {
                       onPressed: () {},
                       child: const Icon(Icons.arrow_drop_up_sharp))
                 ]),
-          )
+          ),
+          const Text('Texto 1')
         ]),
       ),
     );
