@@ -66,7 +66,7 @@ class Task extends StatelessWidget {
                     width: 200,
                     child: Text(
                       nome,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 24, overflow: TextOverflow.ellipsis),
                     ),
                   ),
