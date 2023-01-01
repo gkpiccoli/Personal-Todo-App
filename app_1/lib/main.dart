@@ -62,7 +62,7 @@ class Task extends StatelessWidget {
                     width: 72,
                     height: 100,
                   ),
-                  Container(
+                  SizedBox(
                     width: 200,
                     child: Text(
                       nome,
