@@ -18,8 +18,8 @@ Projeto teste utilizado para desenhar telas com o framework Flutter.
 - Body (meio da tela)
 - Layout do App ()
 - Stateless Widget
-- ListView (Permite ver uma 'lista' de widgets, não ficando limitado com as proporções da coluna)
-- Padding ()
+- ListView (Permite ver uma 'lista' de widgets, não ficando limitado com as proporções da coluna, pode arrastar a tela)
+- Padding (Permite criar uma camada externa no seu widget filho)
 
 ## Getting Started
 

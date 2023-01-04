@@ -37,16 +37,21 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Task extends StatelessWidget {
+class Task extends StatefulWidget {
   final String nome;
   const Task(this.nome, {super.key});
 
   @override
+  State<Task> createState() => _TaskState();
+}
+
+class _TaskState extends State<Task> {
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Container(
-        child: Stack(children: [
+      child: Stack(
+        children: [
           Container(
             color: Colors.blue,
             height: 140,
@@ -57,15 +62,23 @@ class Task extends StatelessWidget {
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    color: Colors.black26,
-                    width: 100,
-                    height: 100,
+                  Column(
+                    children: [
+                      Container(
+                        color: Colors.black26,
+                        width: 100,
+                        height: 100,
+                      ),
+                      const Text(
+                        'Texto 1',
+                        style: TextStyle(color: Colors.black, fontSize: 12),
+                      ),
+                    ],
                   ),
                   SizedBox(
                     width: 200,
                     child: Text(
-                      nome,
+                      widget.nome,
                       style: const TextStyle(
                           fontSize: 24, overflow: TextOverflow.ellipsis),
                     ),
@@ -75,8 +88,7 @@ class Task extends StatelessWidget {
                       child: const Icon(Icons.arrow_drop_up_sharp))
                 ]),
           ),
-          const Text('Texto 1')
-        ]),
+        ],
       ),
     );
   }
