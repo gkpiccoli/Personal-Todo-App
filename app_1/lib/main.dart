@@ -64,102 +64,100 @@ class _TasksState extends State<Tasks> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Container(
-        child: Stack(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(4),
-                color: Colors.blue,
-              ),
-              height: 140,
+      child: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(4),
+              color: Colors.blue,
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4),
-                    color: Colors.white,
-                  ),
-                  height: 100,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Container(
-                        width: 72,
-                        height: 100,
-                        color: Colors.black26,
-                        child: Image.network(
-                          widget.foto,
-                          fit: BoxFit.cover,
-                        ),
+            height: 140,
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4),
+                  color: Colors.white,
+                ),
+                height: 100,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 72,
+                      height: 100,
+                      color: Colors.black26,
+                      child: Image.network(
+                        widget.foto,
+                        fit: BoxFit.cover,
                       ),
-                      Container(
-                        width: 200,
-                        child: Text(
-                          widget.nome,
-                          style: const TextStyle(
-                              fontSize: 24, overflow: TextOverflow.ellipsis),
-                        ),
+                    ),
+                    SizedBox(
+                      width: 200,
+                      child: Text(
+                        widget.nome,
+                        style: const TextStyle(
+                            fontSize: 24, overflow: TextOverflow.ellipsis),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Container(
-                          height: 52,
-                          width: 52,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              setState(() {
-                                nivel++;
-                              });
-                            },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: const [
-                                Icon(Icons.arrow_drop_up),
-                                Text(
-                                  'UP',
-                                  style: TextStyle(fontSize: 12),
-                                ),
-                              ],
-                            ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: SizedBox(
+                        height: 52,
+                        width: 52,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              nivel++;
+                            });
+                          },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: const [
+                              Icon(Icons.arrow_drop_up),
+                              Text(
+                                'UP',
+                                style: TextStyle(fontSize: 12),
+                              ),
+                            ],
                           ),
                         ),
-                      )
-                    ],
-                  ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 8,
                       ),
-                      child: Container(
-                        width: 200,
-                        child: LinearProgressIndicator(
-                          color: Colors.white,
-                          value: nivel / 10,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(12.0),
-                      child: Text(
-                        'Nivel: $nivel',
-                        style: TextStyle(color: Colors.white, fontSize: 16),
-                      ),
-                    ),
+                    )
                   ],
-                )
-              ],
-            ),
-          ],
-        ),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 8,
+                    ),
+                    child: SizedBox(
+                      width: 200,
+                      child: LinearProgressIndicator(
+                        color: Colors.white,
+                        value: nivel / 10,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Text(
+                      'Nivel: $nivel',
+                      style: const TextStyle(color: Colors.white, fontSize: 16),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ],
       ),
     );
   }
