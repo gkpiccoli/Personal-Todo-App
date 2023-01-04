@@ -5,90 +5,157 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Widgets - Flutter',
+      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(title: const Text('Tarefas')),
+        appBar: AppBar(
+          title: const Text('Tarefas'),
+          leading: Container(),
+        ),
         body: ListView(
-          scrollDirection: Axis.vertical,
           children: const [
-            Task('Viagens'),
-            Task('Dicas de Hotéis e Bares'),
-            Task(
-                'Locais de visitação quando o dia estiver ensolarado ou você queira se aventurar'),
-            Task('Negócios'),
-            Task('Tendências'),
-            Task('Cultura')
+            Padding(
+              padding: EdgeInsets.only(top: 8),
+              child: Tasks(
+                'Estudar Flutter',
+              ),
+            ),
+            Tasks(
+              'Andar de Bike',
+            ),
+            Tasks(
+              'Ler',
+            ),
+            Tasks(
+              'Meditar',
+            ),
+            Tasks(
+              'Jogar',
+            )
           ],
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: (() {}),
+          onPressed: () {},
         ),
       ),
     );
   }
 }
 
-class Task extends StatefulWidget {
+class Tasks extends StatefulWidget {
   final String nome;
-  const Task(this.nome, {super.key});
+  const Tasks(this.nome, {Key? key}) : super(key: key);
 
   @override
-  State<Task> createState() => _TaskState();
+  State<Tasks> createState() => _TasksState();
 }
 
-class _TaskState extends State<Task> {
+class _TasksState extends State<Tasks> {
   @override
+  int nivel = 0;
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Stack(
-        children: [
-          Container(
-            color: Colors.blue,
-            height: 140,
-          ),
-          Container(
-            color: Colors.white,
-            height: 100,
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
+      child: Container(
+        child: Stack(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(4),
+                color: Colors.blue,
+              ),
+              height: 140,
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4),
+                    color: Colors.white,
+                  ),
+                  height: 100,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        color: Colors.black26,
-                        width: 100,
+                        width: 72,
                         height: 100,
+                        color: Colors.black26,
                       ),
-                      const Text(
-                        'Texto 1',
-                        style: TextStyle(color: Colors.black, fontSize: 12),
+                      Container(
+                        width: 200,
+                        child: Text(
+                          widget.nome,
+                          style: const TextStyle(
+                              fontSize: 24, overflow: TextOverflow.ellipsis),
+                        ),
                       ),
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Container(
+                          height: 52,
+                          width: 52,
+                          child: ElevatedButton(
+                            onPressed: () {
+                              setState(() {
+                                nivel++;
+                              });
+                            },
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: const [
+                                Icon(Icons.arrow_drop_up),
+                                Text(
+                                  'UP',
+                                  style: TextStyle(fontSize: 12),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      )
                     ],
                   ),
-                  SizedBox(
-                    width: 200,
-                    child: Text(
-                      widget.nome,
-                      style: const TextStyle(
-                          fontSize: 24, overflow: TextOverflow.ellipsis),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 8,
+                      ),
+                      child: Container(
+                        width: 200,
+                        child: LinearProgressIndicator(
+                          color: Colors.white,
+                          value: nivel / 10,
+                        ),
+                      ),
                     ),
-                  ),
-                  ElevatedButton(
-                      onPressed: () {},
-                      child: const Icon(Icons.arrow_drop_up_sharp))
-                ]),
-          ),
-        ],
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Text(
+                        'Nivel: $nivel',
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
