@@ -24,21 +24,33 @@ class MyApp extends StatelessWidget {
           children: const [
             Padding(
               padding: EdgeInsets.only(top: 8),
-              child: Tasks('Estudar Flutter',
-                  'https://firebasestorage.googleapis.com/v0/b/dashatar-dev.appspot.com/o/dashatars%2FRGFzaGF0YXJfRGV2ZWxvcGVyX05ldXRyYWxfY29sb3JfTl9QV19zaGFkb3c=.png?alt=media',2),
+              child: Tasks(
+                'Estudar Flutter',
+                'https://firebasestorage.googleapis.com/v0/b/dashatar-dev.appspot.com/o/dashatars%2FRGFzaGF0YXJfRGV2ZWxvcGVyX05ldXRyYWxfY29sb3JfTl9QV19zaGFkb3c=.png?alt=media',
+                2,
+              ),
             ),
             Tasks(
               'Correr',
-              'https://images.unsplash.com/photo-1573475620830-d9f2e9459ffe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',4,
+              'https://images.unsplash.com/photo-1573475620830-d9f2e9459ffe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+              4,
             ),
-            Tasks('Ler',
-                'https://images.unsplash.com/photo-1499257398700-43669759a540?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',3),
-            Tasks('Meditar',
-                'https://images.unsplash.com/photo-1604078893234-ff3a1a5d5292?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=661&q=80'),
-            Tasks('Faxinar',
-                'https://images.unsplash.com/photo-1563453392212-326f5e854473?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',4),
-            Tasks('Comer',
-                'https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1153&q=80',1)
+            Tasks(
+                'Ler',
+                'https://images.unsplash.com/photo-1499257398700-43669759a540?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+                3),
+            Tasks(
+                'Meditar',
+                'https://images.unsplash.com/photo-1604078893234-ff3a1a5d5292?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=661&q=80',
+                5),
+            Tasks(
+                'Faxinar',
+                'https://images.unsplash.com/photo-1563453392212-326f5e854473?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+                4),
+            Tasks(
+                'Comer',
+                'https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1153&q=80',
+                1)
           ],
         ),
         floatingActionButton: FloatingActionButton(
@@ -52,7 +64,7 @@ class MyApp extends StatelessWidget {
 class Tasks extends StatefulWidget {
   final String nome;
   final String foto;
-  final String dificuldade;
+  final int dificuldade;
 
   const Tasks(this.nome, this.foto, this.dificuldade, {Key? key})
       : super(key: key);
@@ -112,30 +124,40 @@ class _TasksState extends State<Tasks> {
                         ),
                         Row(
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.star,
                               size: 15,
-                              color: Colors.blue,
-                            ),
-                            const Icon(
-                              Icons.star,
-                              size: 15,
-                              color: Colors.blue,
+                              color: (widget.dificuldade >= 1)
+                                  ? Colors.blue
+                                  : Colors.blue[100],
                             ),
                             Icon(
                               Icons.star,
                               size: 15,
-                              color: Colors.blue[100],
+                              color: (widget.dificuldade >= 2)
+                                  ? Colors.blue
+                                  : Colors.blue[100],
                             ),
                             Icon(
                               Icons.star,
                               size: 15,
-                              color: Colors.blue[100],
+                              color: (widget.dificuldade >= 3)
+                                  ? Colors.blue
+                                  : Colors.blue[100],
                             ),
                             Icon(
                               Icons.star,
                               size: 15,
-                              color: Colors.blue[100],
+                              color: (widget.dificuldade >= 4)
+                                  ? Colors.blue
+                                  : Colors.blue[100],
+                            ),
+                            Icon(
+                              Icons.star,
+                              size: 15,
+                              color: (widget.dificuldade >= 5)
+                                  ? Colors.blue
+                                  : Colors.blue[100],
                             ),
                           ],
                         )
@@ -180,7 +202,7 @@ class _TasksState extends State<Tasks> {
                       width: 200,
                       child: LinearProgressIndicator(
                         color: Colors.white,
-                        value: nivel / 10,
+                        value: (nivel / widget.dificuldade / 10),
                       ),
                     ),
                   ),
@@ -192,7 +214,7 @@ class _TasksState extends State<Tasks> {
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ],
