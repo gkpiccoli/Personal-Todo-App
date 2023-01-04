@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
             Tasks(
-              'Andar de Bike',
+              'Correr',
             ),
             Tasks(
               'Ler',
