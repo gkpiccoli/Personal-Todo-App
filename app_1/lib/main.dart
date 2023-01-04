@@ -109,12 +109,12 @@ class _TasksState extends State<Tasks> {
                         ),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.star,
                               size: 15,
                               color: Colors.blue,
                             ),
-                            Icon(
+                            const Icon(
                               Icons.star,
                               size: 15,
                               color: Colors.blue,
