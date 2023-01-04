@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
               'Meditar',
             ),
             Tasks(
-              'Jogar',
+              'Faxinar',
             )
           ],
         ),
