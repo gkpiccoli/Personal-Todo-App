@@ -91,6 +91,8 @@ class _TasksState extends State<Tasks> {
                         width: 72,
                         height: 100,
                         color: Colors.black26,
+                        child: Image.network(
+                            'https://firebasestorage.googleapis.com/v0/b/dashatar-dev.appspot.com/o/dashatars%2FRGFzaGF0YXJfRGV2ZWxvcGVyX05ldXRyYWxfY29sb3JfTl9QV19zaGFkb3c=.png?alt=media'),
                       ),
                       Container(
                         width: 200,
