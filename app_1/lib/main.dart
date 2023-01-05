@@ -106,10 +106,13 @@ class _TasksState extends State<Tasks> {
                       height: 100,
                       decoration:
                           BoxDecoration(borderRadius: BorderRadius.circular(4)),
-                      child: Image.network(
-                        widget.foto,
-                        fit: BoxFit.cover,
-                      ), 
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(4),
+                        child: Image.network(
+                          widget.foto,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,

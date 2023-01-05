@@ -22,6 +22,7 @@ Projeto teste utilizado para desenhar telas com o framework Flutter.
 - Padding (Permite criar uma camada externa no seu widget filho)
 - Image.network()
 - Operador ternário(condição? valor se for verdareiro : valor se for falso)
+- ClipRRect (Widget para arredondar ou personalizar cantos)
 
 ## Getting Started
 
