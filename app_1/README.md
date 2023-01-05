@@ -21,7 +21,7 @@ Projeto teste utilizado para desenhar telas com o framework Flutter.
 - ListView (Permite ver uma 'lista' de widgets, não ficando limitado com as proporções da coluna, pode arrastar a tela)
 - Padding (Permite criar uma camada externa no seu widget filho)
 - Image.network()
-- Condição Ternária para delimitar as dificuldades.
+- Operador ternário(condição? valor se for verdareiro : valor se for falso)
 
 ## Getting Started
 

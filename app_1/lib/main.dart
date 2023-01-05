@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
             Tasks(
                 'Comer',
                 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1153&q=80',
-                1)
+                0)
           ],
         ),
         floatingActionButton: FloatingActionButton(
@@ -202,7 +202,9 @@ class _TasksState extends State<Tasks> {
                       width: 200,
                       child: LinearProgressIndicator(
                         color: Colors.white,
-                        value: (nivel / widget.dificuldade / 10),
+                        value: (widget.dificuldade > 0)
+                            ? (nivel / widget.dificuldade) / 10
+                            : 1,
                       ),
                     ),
                   ),
