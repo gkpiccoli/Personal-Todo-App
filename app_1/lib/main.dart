@@ -104,11 +104,12 @@ class _TasksState extends State<Tasks> {
                     Container(
                       width: 72,
                       height: 100,
-                      color: Colors.black26,
+                      decoration:
+                          BoxDecoration(borderRadius: BorderRadius.circular(4)),
                       child: Image.network(
                         widget.foto,
                         fit: BoxFit.cover,
-                      ),
+                      ), 
                     ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
