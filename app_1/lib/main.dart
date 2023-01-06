@@ -21,8 +21,8 @@ class MyApp extends StatelessWidget {
           leading: Container(),
         ),
         body: AnimatedOpacity(
-          opacity: 20,
-          duration: Duration(milliseconds: 1000),
+          opacity: 0.5,
+          duration: const Duration(milliseconds: 500),
           child: ListView(
             children: const [
               Padding(
