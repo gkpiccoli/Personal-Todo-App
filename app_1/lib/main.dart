@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  bool opacidade = true;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           leading: Container(),
         ),
         body: AnimatedOpacity(
-          opacity: 0.5,
+          opacity: opacidade ? 1 : 0,
           duration: const Duration(milliseconds: 500),
           child: ListView(
             children: const [
