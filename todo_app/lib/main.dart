@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'difficulty.dart';
 import 'initial_screen.dart';
-import 'task.dart';
 
 void main() {
   runApp(const MyApp());
