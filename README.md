@@ -1,6 +1,6 @@
 # App de tarefas em Flutter.
 
-![print](https://github.com/gkpiccoli/test/blob/master/Screenshot_20230108_101050.png)
+![print](https://github.com/gkpiccoli/test/blob/master/peek_tela.gif)
 
 
 ## Sobre:
