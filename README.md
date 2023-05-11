@@ -4,9 +4,9 @@
 
 ## O que eu aprendi?
 
-Componentização e herança
-Layout
-Utilização de imagens de uma fonte externa
+- Componentização e herança
+- Layout
+- Utilização de imagens de uma fonte externa
 
 ## Sobre:
 
